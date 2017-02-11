@@ -13,45 +13,50 @@ import java.util.Scanner;
  * @author andrew
  */
 public class Calculator {
-    
+    static int number1, number2, result;
+    static String operand;
     public static void main(String[] args) {
-        int number1, number2, result = 0;
-        String operation;
-        Scanner sc = new Scanner(System.in);
-     
-        System.out.println("Enter the first number: ");
-         number1 = sc.nextInt();
-         
-         System.out.println("Enter the second number: ");
-         number2 = sc.nextInt();
-         
-        System.out.println("What do you want to do? ");
-        operation = sc.next();
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Enter first number: ");
+        number1 = userInput.nextInt();
+        System.out.println("Enter operand: ");
+        operand = userInput.next();
+        System.out.println("Enter second number: ");
+        number2 = userInput.nextInt();
+        choseOperation();
         
-        while (operation != "+") {
-            
-           System.out.println("again");
-            
-           
-       }
-              
-        switch(operation) {
-           case ("+"):               
-               result = number1 + number2;
-               break;
-           case "-":    
-               result = number1 - number2;
-               break;
-           case "*":    
-               result = number1 * number2;
-               break;
-           case "/":    
-               result = number1 / number2;
-               break;
-        }
-       
+        System.out.println(result);
         
-        System.out.println(number1 + operation + number2 + "=" + result);
     }
+    public static int calcDivide() {
+        result = number1 / number2;
+        return (result); 
+    }
+    public static int calcFold() {
+        result = number1 + number2;
+        return (result);
+    }
+    public static int calcDeduct() {
+        result = number1 - number2;
+        return (result);
+    }
+    public static int calcMultiply() {
+        result = number1 * number2;
+        return (result);
+    }
+    public static void choseOperation() {
+        switch(operand) {
+            case "+":
+                calcFold();
+            case "-":
+                calcDeduct();
+            case "*":
+                calcMultiply();
+            case "/":
+                calcDivide();
+        }
+                
+    }
+            
         
 }
