@@ -17,14 +17,18 @@ public class CheckInput {
         switch(operation) {
             case "+":
                 Operations.calcFold(number1, number2);
+                break;
             case "-":
                 Operations.calcDeduct(number1, number2);
+                break;
             case "*":
                 Operations.calcMultiply(number1, number2);
+                break;
             case "/":
                 Operations.calcDivide(number1, number2);
+                break;
         }
-                
+           
     }
       
     

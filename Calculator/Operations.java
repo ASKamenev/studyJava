@@ -15,7 +15,7 @@ public class Operations {
     }
     public static int calcFold(int number1, int number2) {
         result = number1 + number2;
-        return (result);
+            return (result);
     }
     public static int calcDeduct(int number1, int number2){
         result = number1 - number2;

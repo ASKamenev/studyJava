@@ -17,7 +17,21 @@ import java.util.Scanner;
 public class Calculator {
     static String operand;
     public static void main(String[] args) {
+        
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Type first number");
+        Operations.number1 = sc.nextInt();
+         
+        System.out.println("operand");
+        operand = sc.next();
+        
+        System.out.println("Type second number");
+        Operations.number2 = sc.nextInt();
+        
+        CheckInput.choseOperation(operand);
       
+        System.out.println(Operations.number1 + " " + operand + " " + Operations.number2 + " = " + Operations.result);
    
     }
          
