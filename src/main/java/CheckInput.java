@@ -1,20 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Calculator;
+package main.java;
 
-import static Calculator.Operations.*;
-
-/**
- *
- * @author andrew
- */
-public class CheckInput {
-    
-     public static void choseOperation(String operation) {
-        switch(operation) {
+class CheckInput {
+    static void choseOperation(int number1, String operation, int number2) {
+        switch (operation) {
             case "+":
                 Operations.calcFold(number1, number2);
                 break;
@@ -28,8 +16,5 @@ public class CheckInput {
                 Operations.calcDivide(number1, number2);
                 break;
         }
-           
     }
-      
-    
 }
